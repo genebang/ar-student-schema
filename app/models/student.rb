@@ -2,9 +2,7 @@ require_relative '../../db/config'
 
 # implement your Student model here
 class Student < ActiveRecord::Base
-  
-  attr_accessor :birthday
-  
+    
   validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
   validates :email, :uniqueness => true
   validates :age, :numericality => { :greater_than => 5 }
