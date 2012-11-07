@@ -13,6 +13,8 @@ class CreateStudents < ActiveRecord::Migration
       t.string :email
       t.string :phone
       t.date   :birthday
+      t.timestamp :created_at
+      t.timestamp :updated_at
     end
   end
 end
